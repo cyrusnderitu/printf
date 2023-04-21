@@ -11,7 +11,7 @@ int _printf(const char *format, ...);
  */
 typedef struct select
 {
-	char symbol;
+	char *symbol;
 	int (*f)(va_list arg);
 } selector;
 void print_char(va_list arg);
