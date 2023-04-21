@@ -5,18 +5,20 @@ void print_char(va_list arg)
 {
 char letter;
 letter = va_arg(arg, int);
-printf("%c", letter);
+write(1, letter, 1);
+return (1);
 }
+
 void print_str(va_list arg)
 {
 char *str;
+int i;
 str = va_arg(arg, char *);
-if (str == NULL)
+if (str != NULL)
 {
-printf("(nil)");
-return;
-}
-printf("%s", str);
+for (i = 0; str[i] != '\0'; i++)
+write(1, str[i], i);
+return (i);
 }
 
 /**
