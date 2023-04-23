@@ -9,7 +9,7 @@ int print_bin(va_list arg)
 {
 int arr[50], x, i, j, len;
 x = va_arg(arg, int);
-while (x > 0)
+if (x > 0)
 {
 for (i = 0; x > 0; i++)
 {
@@ -22,6 +22,7 @@ _putchar(arr[j]);
 len++;
 }
 return (len);
-va_end(arg);
 }
+else
+return (0);
 }
