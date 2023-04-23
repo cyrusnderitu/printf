@@ -16,7 +16,7 @@ typedef struct select
 	int (*f)(va_list arg);
 } selector;
 
-int (*get_func(const char format))(va_list);
+int (*fetch_func(const char format))(va_list);
 int print_char(va_list arg);
 int print_str(va_list arg);
 int print_bin(va_list arg);
