@@ -18,3 +18,4 @@ printf("Percent:[%%]\n");
 _printf("Decimal to binary:[%b]\n", 5);
 return (0);
 }
+
