@@ -26,7 +26,7 @@ str = va_arg(arg, char *);
 if (str != NULL)
 {
 for (i = 0; str[i] != '\0'; i++)
-write(1, str[i], i);
+_putchar(str[i]);
 return (i);
 }
 /**
@@ -47,7 +47,7 @@ x = x/2;
 }
 for (j = i - 1; j >=0; j--)
 {
-write(1, arr[j], len);
+_putchar(arr[j])
 len++;
 }
 return (len);
