@@ -2,8 +2,8 @@
 /**
  * _printf - Function for printing to stdout.
  * @format: format specifier
- *
- * Return: Number of characters printed else (-1)
+ * @...: va_list to be passed
+ * Return: count of char else (-1)
  */
 int _printf(const char *format, ...)
 {
