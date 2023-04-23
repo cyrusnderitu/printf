@@ -17,8 +17,12 @@ arr[i] = n%2;
 n = n/2;
 }
 for (j = i - 1; j >= 0; j--)
+{
 _putchar(arr[j]);
 }
+}
 else
+{
 return (-1);
+}
 }
