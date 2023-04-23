@@ -1,7 +1,11 @@
 #include "main.h"
 
-
-void print_char(va_list arg)
+/**
+* print_char - Print char to screen
+* @arg: argument passed
+* Return: Always 1 for single char
+*/
+int print_char(va_list arg)
 {
 char letter;
 letter = va_arg(arg, int);
@@ -9,7 +13,12 @@ write(1, letter, 1);
 return (1);
 }
 
-void print_str(va_list arg)
+/**
+* print_str - Prints string
+* @arg: argument passed
+* Return: Length of str
+*/
+int print_str(va_list arg)
 {
 char *str;
 int i;
@@ -20,8 +29,12 @@ for (i = 0; str[i] != '\0'; i++)
 write(1, str[i], i);
 return (i);
 }
-
-void print_bin(va_list arg)
+/**
+* print_bin - converts dec to bin
+* @arg: argument provided
+* Return: Length of binary
+*/
+int print_bin(va_list arg)
 {
 int arr[50], x, i, j, len;
 x = va_arg(arg, int);
@@ -31,15 +44,16 @@ for (i = 0; x > 0; i++)
 {
 arr[i] = x%2;
 x = x/2;
-len++;
 }
 for (j = i - 1; j >=0; j--)
 {
 write(1, arr[j], len);
+len++;
 }
 return (len);
 }
 }
+
 /**
 * get_func - Picks a func in relation 
 *  to the format equal to the selector array

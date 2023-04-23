@@ -14,6 +14,8 @@ typedef struct select
 	char *symbol;
 	int (*f)(va_list arg);
 } selector;
-void print_char(va_list arg);
-void print_str(va_list arg);
+
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_bin(va_list arg);
 #endif
