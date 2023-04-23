@@ -23,5 +23,5 @@ _putchar(arr[j]);
 return (i);
 }
 else
-return (0);
+return (-1);
 }
