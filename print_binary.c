@@ -13,10 +13,10 @@ if (x > 0)
 {
 for (i = 0; x > 0; i++)
 {
-arr[i] = x%2;
-x = x/2;
+arr[i] = x % 2;
+x = x / 2;
 }
-for (j = i - 1; j >=0; j--)
+for (j = i - 1; j >= 0; j--)
 {
 _putchar('0' + arr[j]);
 }
