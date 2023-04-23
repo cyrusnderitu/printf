@@ -22,5 +22,6 @@ _putchar(arr[j]);
 len++;
 }
 return (len);
+va_end(arg);
 }
 }
