@@ -24,9 +24,9 @@ _putchar('%');
 count++;
 x++;
 }
-else if (get_func(format[x + 1]) != NULL)
+else if (fetch_func(format[x + 1]) != NULL)
 {
-count += (get_func(format[x + 1]))(lc);
+count += (fetch_func(format[x + 1]))(lc);
 x++;
 }
 }
