@@ -15,6 +15,8 @@ if (str != NULL)
 for (i = 0; str[i] != '\0'; i++)
 _putchar(str[i]);
 return (i);
-va_end(arg);
+}
+else{
+    return (-1);
 }
 }
