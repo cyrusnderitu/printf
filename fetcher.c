@@ -5,7 +5,7 @@
  * @format: format to be compared to the 
  * function fetched.
  * Return: num of char printted else (-1).
- * */
+ */
 int (*fetch_func(const char format))(va_list)
 {
 selector(array[]) = {
