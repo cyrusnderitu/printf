@@ -2,7 +2,7 @@
 
 /**
  * fetch_func - Fetches a func from an array pool
- * @format: format to be compared to the 
+ * @format: format to be compared to the
  * function fetched.
  * Return: num of char printted else (-1).
  */
