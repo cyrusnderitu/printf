@@ -16,7 +16,8 @@ for (i = 0; str[i] != '\0'; i++)
 _putchar(str[i]);
 return (i);
 }
-else{
-    return (-1);
+else
+{
+return (-1);
 }
 }
