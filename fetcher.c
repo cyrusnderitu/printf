@@ -1,15 +1,12 @@
 #include "main.h"
 
 /**
-* get_func - Picks a func in relation 
-*  to the format equal to the selector array
-*
-*@format: string to be be compared to with
-*  the selector array
-*
-*Return: number of charaters printed else 0
-*/
-int (*get_func(const char format))(va_list)
+ * fetch_func - Fetches a func from an array pool
+ * @format: format to be compared to the 
+ * function fetched.
+ * Return: num of char printted else (-1).
+ * */
+int (*fetch_func(const char format))(va_list)
 {
 selector(array[]) = {
 {'c', print_char},
