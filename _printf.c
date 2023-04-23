@@ -26,7 +26,7 @@ x++;
 }
 else if (get_func(format[x + 1]) != NULL)
 {
-count += (get_func(format[x + 1]))(ap);
+count += (get_func(format[x + 1]))(lc);
 x++;
 }
 }
