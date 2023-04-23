@@ -17,3 +17,4 @@ _putchar(str[i]);
 return (i);
 va_end(arg);
 }
+}
