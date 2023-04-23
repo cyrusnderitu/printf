@@ -29,6 +29,7 @@ for (i = 0; str[i] != '\0'; i++)
 _putchar(str[i]);
 return (i);
 }
+
 /**
 * print_bin - converts dec to bin
 * @arg: argument provided
@@ -47,7 +48,7 @@ x = x/2;
 }
 for (j = i - 1; j >=0; j--)
 {
-_putchar(arr[j])
+_putchar(arr[j]);
 len++;
 }
 return (len);
@@ -75,9 +76,7 @@ int i;
 for (i = 0; array[i].symbol != '\0'; i++)
 {
 if (array[i].symbol == format)
-{
 return (array[i].f);
-}
 }
 return (0);
 }
