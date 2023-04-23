@@ -64,7 +64,7 @@ return (len);
 *
 *Return: number of charaters printed else 0
 */
-int (get_func(const char format))(va_list)
+int (*get_func(const char format))(va_list)
 {
 selector(array[]) = {
 {'c', print_char},
