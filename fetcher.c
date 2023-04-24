@@ -11,7 +11,7 @@ int (*fetch_func(const char format))(va_list)
 selector(array[]) = {
 {'c', print_char},
 {'s', print_str},
-{'i', print_int},
+{'i', print_dec},
 {'d', print_int},
 {'b', print_bin},
 {'o', print_octal},
