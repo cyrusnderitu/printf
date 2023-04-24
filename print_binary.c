@@ -7,7 +7,7 @@
 */
 int print_bin(va_list arg)
 {
-int arr[50], x, i, j;
+int arr[50], x, i, j, size = 0;
 x = va_arg(arg, int);
 if (x == 0)
 {
@@ -24,8 +24,9 @@ x = x / 2;
 for (j = i - 1; j >= 0; j--)
 {
 _putchar('0' + arr[j]);
+size++;
 }
-return (i);
+return (size);
 }
 else
 return (-1);
