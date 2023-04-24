@@ -16,8 +16,6 @@ for (i = 0; str[i] != '\0'; i++)
 _putchar(str[i]);
 return (i);
 }
-else
-{
-return (-1);
-}
+write(1, "(null)", 6);
+return (6);
 }
