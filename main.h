@@ -24,4 +24,5 @@ int _putchar(char c);
 int print_int(va_list args);
 int print_dec(va_list args);
 int print_octal(va_list arg);
+int print_hexa(va_list arg);
 #endif
