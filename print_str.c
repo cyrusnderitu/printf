@@ -12,9 +12,10 @@ int i;
 str = va_arg(arg, char *);
 if (str != NULL)
 {
-for (i = 0; str[i] != '\0'; i++)
-_putchar(str[i]);
-return (i);
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	write(1, str, i);
+	return (i);
 }
 write(1, "(null)", 6);
 return (6);
