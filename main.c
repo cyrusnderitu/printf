@@ -17,6 +17,8 @@ _printf("Length:[%d, %i]\n", len, len);
 printf("Length:[%d, %i]\n", len2, len2);
 _printf("Negative:[%d]\n", -762534);
 printf("Negative:[%d]\n", -762534);
+_printf("Unsigned octal:[%o]\n", 200);
+printf("Unsigned octal:[%o]\n", 200);
 _printf("Character:[%c]\n", 'H');
 printf("Character:[%c]\n", 'H');
 _printf("String:[%s]\n", "I am a string !");

@@ -14,6 +14,7 @@ selector(array[]) = {
 {'i', print_int},
 {'d', print_dec},
 {'b', print_bin},
+{'o', print_octal},
 {'\0', NULL}
 };
 int i;
