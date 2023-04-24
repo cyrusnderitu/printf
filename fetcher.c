@@ -12,15 +12,17 @@ selector(array[]) = {
 {'c', print_char},
 {'s', print_str},
 {'i', print_int},
-{'d', print_dec},
+{'d', print_int},
 {'b', print_bin},
 {'\0', NULL}
 };
+
 int i;
+
 for (i = 0; array[i].symbol != '\0'; i++)
 {
-if (array[i].symbol == format)
-return (array[i].f);
+	if (array[i].symbol == format)
+		return (array[i].f);
 }
 return (0);
 }

@@ -23,6 +23,8 @@ _printf("String:[%s]\n", "I am a string !");
 printf("String:[%s]\n", "I am a string !");
 len = _printf("Percent:[%%]\n");
 len2 = printf("Percent:[%%]\n");
+_printf("Len:[%d]\n", len);
+printf("Len:[%d]\n", len2);
 _printf("Decimal to binary:[%b]\n", 5);
 return (0);
 }

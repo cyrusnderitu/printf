@@ -7,78 +7,65 @@
  */
 int print_int(va_list args)
 {
-int n = va_arg(args, int);
-int num, last = n % 10, digit, exp = 1;
-int  i = 1;
-n = n / 10;
-num = n;
-if (last < 0)
-{
-_putchar('-');
-num = -num;
-n = -n;
-last = -last;
-i++;
-}
-if (num > 0)
-{
-while (num / 10 != 0)
-{
-exp = exp * 10;
-num = num / 10;
-}
-num = n;
-while (exp > 0)
-{
-digit = num / exp;
-_putchar(digit + '0');
-num = num - (digit * exp);
-exp = exp / 10;
-i++;
-}
-}
-_putchar(last + '0');
-return (i);
-}
+	int num = va_arg(args, int), count = 0;
+	int i, rem, j, k;
+	char *str = (char*) malloc(12 * sizeof(char));
+	char *p;
+	char tmp;
 
-/**
- * print_dec - prints decimal
- * @args: argument to print
- * Return: number of characters printed
- */
-int print_dec(va_list args)
-{
-int n = va_arg(args, int);
-int num, last = n % 10, digit;
-int  i = 1;
-int exp = 1;
-n = n / 10;
-num = n;
-if (last < 0)
-{
-_putchar('-');
-num = -num;
-n = -n;
-last = -last;
-i++;
-}
-if (num > 0)
-{
-while (num / 10 != 0)
-{
-exp = exp * 10;
-num = num / 10;
-}
-num = n;
-while (exp > 0)
-{
-digit = num / exp;
-_putchar(digit + '0');
-num = num - (digit * exp);
-exp = exp / 10;
-i++;
-}
-}
-_putchar(last + '0');
-return (i);
+	if (num == 0)
+	{
+		str[0] = '0';
+		str[1] = '\0';
+	}
+
+	else
+	{
+		i = 0;
+		if (num < 0)
+		{
+			str[0] = '-';
+			num = -num;
+			i = 1;
+		}
+		while (num != 0)
+		{
+			rem = num % 10;
+			str[i++] = rem + '0';
+		
+			num /= 10;
+		}
+		str[i] = '\0';
+		
+		if (str[0] == '-')
+		{
+			for (j = 1, k = i - 1; j < k; j++, k--)
+			{
+				tmp = str[j];
+				str[j] = str[k];
+				str[k] = tmp;
+			}
+		}
+		else
+		{
+			for (j = 0, k = i - 1; j < k; j++, k--)
+			{
+				tmp = str[j];
+				str[j] = str[k];
+				str[k] = tmp;
+			}
+		}
+	}
+	
+	p = str;
+	
+	while (*p != '\0')
+	{
+		_putchar(*p++);
+		count++;
+	}
+	
+	free(str);
+	
+	return (count);
 }
