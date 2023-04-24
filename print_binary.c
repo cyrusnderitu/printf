@@ -7,8 +7,8 @@
 */
 int print_bin(va_list arg)
 {
-int arr[50], x, i, j, size = 0;
-x = va_arg(arg, int);
+long int arr[50], x, i, j, size = 0;
+x = va_arg(arg, unsigned int);
 if (x == 0)
 {
 	_putchar('0');
