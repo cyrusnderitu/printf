@@ -14,7 +14,7 @@ if (x > 0)
 for (i = 0; x > 0; i++)
 {
 arr[i] = x % 2;
-x /= 2;
+x = x / 2;
 }
 for (j = i - 1; j >= 0; j--)
 {
@@ -24,5 +24,5 @@ len++;
 return (len);
 }
 else
-return (1);
+return (-1);
 }
