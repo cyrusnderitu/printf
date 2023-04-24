@@ -8,7 +8,7 @@
 int print_octal(va_list arg)
 {
 int digit, rem, oct = 0, j = 1, i;
-digit = va_args(arg, int);
+digit = va_arg(arg, int);
 while (digit > 0)
 {
 rem = digit % 8;
