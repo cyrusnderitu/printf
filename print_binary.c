@@ -7,21 +7,22 @@
 */
 int print_bin(va_list arg)
 {
-int arr[50], x, i, j;
+int arr[50], x, i, j, len;
 x = va_arg(arg, int);
 if (x > 0)
 {
 for (i = 0; x > 0; i++)
 {
 arr[i] = x % 2;
-x = x / 2;
+x /= 2;
 }
 for (j = i - 1; j >= 0; j--)
 {
-_putchar('0' + arr[j]);
+_putchar(arr[j] + 48);
+len++;
 }
-return (i);
+return (len);
 }
 else
-return (-1);
+return (1);
 }
