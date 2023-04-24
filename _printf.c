@@ -29,6 +29,11 @@ else if (fetch_func(format[x + 1]) != NULL)
 count += (fetch_func(format[x + 1]))(lc);
 x++;
 }
+else
+{
+_putchar(format[x]);
+count++;
+}
 }
 else
 {
