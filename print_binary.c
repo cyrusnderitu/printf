@@ -9,6 +9,11 @@ int print_bin(va_list arg)
 {
 int arr[50], x, i, j;
 x = va_arg(arg, int);
+if (x == 0)
+{
+	_putchar('0');
+	return (1);
+}
 if (x > 0)
 {
 for (i = 0; x > 0; i++)
