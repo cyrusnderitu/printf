@@ -18,7 +18,7 @@ x /= 2;
 }
 for (j = i - 1; j >= 0; j--)
 {
-_putchar(arr[j] + 48);
+_putchar('0' + arr[j]);
 len++;
 }
 return (len);
