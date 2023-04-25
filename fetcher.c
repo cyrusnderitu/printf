@@ -16,6 +16,7 @@ selector(array[]) = {
 {'b', print_bin},
 {'o', print_octal},
 {'x', print_hexa},
+{'u', print_unsigned_int},
 {'\0', NULL}
 };
 
