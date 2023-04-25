@@ -8,7 +8,7 @@
 int print_octal(va_list arg)
 {
 long int arr[50], x, i, j, size = 0;
-x = val;
+x = va_arg(arg, int);
 if (x == 0)
 {
 putchar('0');
