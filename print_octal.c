@@ -7,27 +7,30 @@
  */
 int print_octal(va_list arg)
 {
-long int arr[50], x, i, j, size = 0;
-x = va_arg(arg, int);
-if (x == 0)
-{
-putchar('0');
-return (1);
-}
-if (x > 0)
-{
-for (i = 0; x > 0; i++)
-{
-arr[i] = x % 8;
-x = x / 8;
-}
-for (j = i - 1; j >= 0; j--)
-{
-putchar('0' + arr[j]);
-size++;
-}
-return (size);
-}
-else
-return (-1);
+	long int octalarr[32], num, i = 0, j, size = 0;
+
+	num = va_arg(arg, unsigned int);
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	if (num > 0)
+	{
+		while (num > 0)
+		{
+			octalarr[i] = num % 8;
+			num /= 8;
+			i++;
+		}
+		for (j = i - 1; j >= 0; j--)
+		{
+			_putchar('0' + octalarr[j]);
+			size++;
+		}
+		return (size);
+	}
+	else
+		return (-1);
 }
