@@ -11,7 +11,7 @@ int print_addr(va_list arg)
 	void *ptr;
 	char *nil = "(nil)";
 	ptr = va_arg(arg, void*);
-	if (p != NULL)
+	if (ptr != NULL)
 	{
 		_putchar('0');
 		_putchar('x');
