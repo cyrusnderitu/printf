@@ -14,6 +14,12 @@ int print_unsigned_int(va_list arg)
 
 	num = va_arg(arg, unsigned int);
 
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
 	while (num != 0)
 	{
 		rem = num % 10;
