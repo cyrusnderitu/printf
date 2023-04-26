@@ -15,7 +15,7 @@ int print_addr(va_list arg)
 	{
 		_putchar('0');
 		_putchar('x');
-		int result = print_hexa_lowercase(p);
+		int result = print_hexa_lowercase(ptr);
 		return (result + 2);
 	}
 	else
