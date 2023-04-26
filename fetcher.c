@@ -18,6 +18,7 @@ selector(array[]) = {
 {'x', print_hexa_lowercase},
 {'X', print_hexa_uppercase},
 {'u', print_unsigned_int},
+{'p', print_addr},
 {'\0', NULL}
 };
 
