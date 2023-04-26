@@ -7,20 +7,28 @@
  */
 int print_addr(va_list arg)
 {
-	int x;
 	void *ptr;
+	int i;
+	int size;
 	char *nil = "(nil)";
+	char hexLc[32];
 	ptr = va_arg(arg, void*);
+	unsigned long int num = (unsigned long int)ptr;
 	if (ptr != NULL)
 	{
-		_putchar('0');
-		_putchar('x');
-		int result = print_hexa_lowercase(ptr);
-		return (result + 2);
+		for (i = 0; hexLc[i] != '\0'; i++)
+		{
+			hexLc[i] = num % 16;
+			num /= 16;
+			size++;
+		}
+		return (i);
 	}
 	else
 	{
 		write(1, &nil, 6);
 		return (6);
 	}
+	while (size-- > 0)
+	_putchar(hexLc[size]);
 }
