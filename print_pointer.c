@@ -5,7 +5,7 @@
  * @arg: argument provided
  * Return: Len of stdout
  */
-int print_pointer(va_list arg)
+int print_addr(va_list arg)
 {
 	int x;
 	void *ptr;
