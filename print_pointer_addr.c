@@ -8,24 +8,26 @@
 int print_addr(va_list arg)
 {
 	void *ptr;
-	int i;
-	int val;
+	int i, val;
+	unsigned long int num;
 	char *nil = "(nil)";
-	char hexLc[32];
+	char hexlc[32];
+
+	num = (unsigned long int)ptr;
 	ptr = va_arg(arg, void*);
-	unsigned long int num = (unsigned long int)ptr;
+
 	if (num != 0)
 	{
-		for (i = 0; hexLc[i] != '\0'; i++)
+		for (i = 0; hexlc[i] != '\0'; i++)
 		{
-			int val = num % 16;
+			val = num % 16;
 			if (val < 10)
 			{
-				hexLc[i] = val + 0;
+				hexlc[i] = val + 0;
 			}
 			else
 			{
-				hexLc[i] = val - 10 + 'a';
+				hexlc[i] = val - 10 + 'a';
 			}
 			num /= 16;
 		}
@@ -37,5 +39,5 @@ int print_addr(va_list arg)
 		return (6);
 	}
 	while (i-- > 0)
-	_putchar(hexLc[i]);
+	_putchar(hexlc[i]);
 }
