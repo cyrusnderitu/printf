@@ -24,6 +24,8 @@ int print_bin(va_list arg);
 int print_int(va_list args);
 int print_dec(va_list args);
 int print_octal(va_list arg);
+int print_pointer_addr(va_list val);
+int printf_hex_aux(unsigned long int num);
 int print_hexa_lowercase(va_list arg);
 int print_hexa_uppercase(va_list arg);
 int print_unsigned_int(va_list arg);

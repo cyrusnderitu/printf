@@ -17,6 +17,7 @@ selector(array[]) = {
 {'o', print_octal},
 {'x', print_hexa_lowercase},
 {'X', print_hexa_uppercase},
+{'p', print_pointer_addr},
 {'u', print_unsigned_int},
 {'r', print_str_rev},
 {'R', rot13},
