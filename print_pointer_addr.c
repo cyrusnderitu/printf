@@ -17,7 +17,10 @@ int print_hex_addr(unsigned long int num)
 	}
 	size++;
 	arr = malloc(size * sizeof(long int));
-
+	if (arr == NULL)
+	{
+		return (-1);
+	}
 	for (i = 0; i < size; i++)
 	{
 		arr[i] = temp % 16;
