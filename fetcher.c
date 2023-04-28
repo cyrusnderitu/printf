@@ -19,6 +19,7 @@ selector(array[]) = {
 {'X', print_hexa_uppercase},
 {'u', print_unsigned_int},
 {'r', print_str_rev},
+{'R', rot13},
 {'\0', NULL}
 };
 
