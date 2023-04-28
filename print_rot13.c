@@ -28,7 +28,7 @@ int rot13(va_list arg)
 				break;
 			}
 		}
-		if (j == 53)
+		if (j == 52)
 			_putchar(str[i]);
 	}
 
