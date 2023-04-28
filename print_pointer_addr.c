@@ -60,5 +60,5 @@ int print_pointer_addr(va_list val)
 	_putchar('0');
 	_putchar('x');
 	j = print_hex_addr(a);
-	return (b + 2);
+	return (j + 2);
 }
