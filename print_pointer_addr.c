@@ -36,9 +36,9 @@ int print_hex_addr(unsigned long int num)
 }
 
 /**
- * printf_pointer - prints an hexgecimal number.
- * @val: arguments.
- * Return: counter.
+ * print_pointer_addr- prints address given.
+ * @val: arguments parameter.
+ * Return: size.
  */
 int print_pointer_addr(va_list val)
 {
