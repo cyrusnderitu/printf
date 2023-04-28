@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_hex_addr - prints hexadecimal num.
+ * print_hex_addr - prints hexadecimal num.
  * @num: arguments parameter to the function.
  * Return: Always succes(0) else (-1).
  */
