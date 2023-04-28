@@ -28,4 +28,7 @@ int print_hexa_lowercase(va_list arg);
 int print_hexa_uppercase(va_list arg);
 int print_unsigned_int(va_list arg);
 int print_addr(va_list arg);
+int print_str_rev(va_list arg);
+
+
 #endif
